@@ -11,5 +11,10 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB  # 최대 5MB 파일만 허용
+      max-request-size: 10MB
